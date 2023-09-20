@@ -2,6 +2,8 @@ package io.github.darkaster72.mssc_beer_service.web.controller;
 
 import io.github.darkaster72.mssc_beer_service.service.BeerService;
 import io.github.darkaster72.mssc_beer_service.web.model.BeerDto;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +17,14 @@ public class BeerController {
 
     public BeerController(BeerService beerService) {
         this.beerService = beerService;
+    }
+
+    @GetMapping
+    ResponseEntity<Page<BeerDto>> get(
+            @RequestParam(name = "page", defaultValue = "0") int page,
+            @RequestParam(name = "size", defaultValue = "20") int size
+    ) {
+        return ResponseEntity.ok(beerService.get(PageRequest.of(page, size)));
     }
 
     @GetMapping("/{id}")
