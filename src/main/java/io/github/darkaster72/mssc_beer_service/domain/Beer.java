@@ -1,7 +1,10 @@
-package io.github.darkaster72.mssc_beer_service.web.domain;
+package io.github.darkaster72.mssc_beer_service.domain;
 
 import io.github.darkaster72.mssc_beer_service.web.model.BeerStyle;
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Version;
 import lombok.Builder;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
@@ -10,7 +13,6 @@ import org.hibernate.annotations.UuidGenerator;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
-import java.time.OffsetDateTime;
 import java.util.UUID;
 
 @Data

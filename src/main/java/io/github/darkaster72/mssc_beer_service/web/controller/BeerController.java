@@ -1,6 +1,6 @@
 package io.github.darkaster72.mssc_beer_service.web.controller;
 
-import io.github.darkaster72.mssc_beer_service.service.BeerService;
+import io.github.darkaster72.mssc_beer_service.web.service.BeerService;
 import io.github.darkaster72.mssc_beer_service.web.model.BeerDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

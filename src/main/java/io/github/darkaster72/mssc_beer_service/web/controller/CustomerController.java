@@ -1,6 +1,6 @@
 package io.github.darkaster72.mssc_beer_service.web.controller;
 
-import io.github.darkaster72.mssc_beer_service.service.CustomerService;
+import io.github.darkaster72.mssc_beer_service.web.service.CustomerService;
 import io.github.darkaster72.mssc_beer_service.web.model.CustomerDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

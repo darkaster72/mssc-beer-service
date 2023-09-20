@@ -1,4 +1,4 @@
-package io.github.darkaster72.mssc_beer_service.service;
+package io.github.darkaster72.mssc_beer_service.web.service;
 
 import io.github.darkaster72.mssc_beer_service.web.model.CustomerDto;
 
