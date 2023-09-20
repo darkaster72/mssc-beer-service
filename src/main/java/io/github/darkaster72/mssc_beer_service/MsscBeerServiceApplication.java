@@ -1,4 +1,4 @@
-package io.github.darkaster72.msscbrewery;
+package io.github.darkaster72.mssc_beer_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

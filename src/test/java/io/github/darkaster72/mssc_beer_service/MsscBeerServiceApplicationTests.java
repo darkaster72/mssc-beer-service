@@ -1,4 +1,4 @@
-package io.github.darkaster72.msscbrewery;
+package io.github.darkaster72.mssc_beer_service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
