@@ -1,7 +1,8 @@
 package io.github.darkaster72.mssc_beer_service.web.controller;
 
-import io.github.darkaster72.mssc_beer_service.web.service.BeerService;
 import io.github.darkaster72.mssc_beer_service.web.model.BeerDto;
+import io.github.darkaster72.mssc_beer_service.web.service.BeerService;
+import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
@@ -34,13 +35,13 @@ public class BeerController {
 
 
     @PostMapping
-    ResponseEntity<BeerDto> create(@RequestBody BeerDto beerDto) {
+    ResponseEntity<BeerDto> create(@Valid @RequestBody BeerDto beerDto) {
         var result = beerService.save(beerDto);
         return ResponseEntity.created(URI.create("/api/v1/beers/" + result.id())).body(result);
     }
 
     @PutMapping("/{id}")
-    ResponseEntity<BeerDto> update(@PathVariable UUID id, @RequestBody BeerDto beerDto) {
+    ResponseEntity<BeerDto> update(@PathVariable UUID id, @Valid @RequestBody BeerDto beerDto) {
         var result = beerService.update(id, beerDto);
         return ResponseEntity.noContent().build();
     }
