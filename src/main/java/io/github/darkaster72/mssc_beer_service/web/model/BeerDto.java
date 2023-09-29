@@ -5,11 +5,13 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Null;
 import jakarta.validation.constraints.Positive;
 import lombok.Builder;
+import lombok.With;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
+@With
 @Builder
 public record BeerDto(
         @Null
@@ -22,7 +24,7 @@ public record BeerDto(
         OffsetDateTime createdDate,
         @Null
         OffsetDateTime lastModifiedDate,
-        @NotBlank
+        @NotNull
         BeerStyle beerStyle,
         @Positive
         @NotNull
